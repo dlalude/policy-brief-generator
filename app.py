@@ -72,17 +72,17 @@ if uploaded_file is not None:
             mime="text/plain"
         )
 
-        from gtts import gTTS
-        import os
+        # from gtts import gTTS
+        # import os
 
-        # Convert summary text to speech
-        tts = gTTS(text=final_summary)
-        tts.save("summary.mp3")
+        # # Convert summary text to speech
+        # tts = gTTS(text=final_summary)
+        # tts.save("summary.mp3")
 
-        # Add audio player
-        audio_file = open("summary.mp3", "rb")
-        audio_bytes = audio_file.read()
-        st.audio(audio_bytes, format="audio/mp3")
+        # # Add audio player
+        # audio_file = open("summary.mp3", "rb")
+        # audio_bytes = audio_file.read()
+        # st.audio(audio_bytes, format="audio/mp3")
 
     else:
         st.warning("No readable text found in the PDF.")
